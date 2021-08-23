@@ -1,1 +1,2 @@
 RVA to RAW
+ReadFile과 MapViewOfFile이 PE File에 접근하는 방법은 같다.
