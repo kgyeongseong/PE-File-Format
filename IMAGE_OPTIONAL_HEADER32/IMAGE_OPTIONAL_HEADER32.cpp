@@ -26,8 +26,8 @@ int main()
 
     PIMAGE_DOS_HEADER pImage_Dos_Header = (PIMAGE_DOS_HEADER)pBaseOfFile;
 
-    // BaseOfFile + (PIMAGE_DOS_HEADER->e_lfanew) + Signature (4bytes) + (IMAGE_FILE_HEADER Å©±â) == PIMAGE_OPTIONAL_HEADER
-    // ÀÌ °æ¿ì¿£ IMAGE_FILE_HEADERÀÇ Å©±â : 0x14 (20)
+    // BaseOfFile + (PIMAGE_DOS_HEADER->e_lfanew) + Signature (4bytes) + (IMAGE_FILE_HEADER í¬ê¸°) == PIMAGE_OPTIONAL_HEADER
+    // ì´ ê²½ìš° IMAGE_FILE_HEADER í¬ê¸° : 0x14 (20)
     PIMAGE_OPTIONAL_HEADER32 pImage_Optional_Header32 = (PIMAGE_OPTIONAL_HEADER32)((LONG)pImage_Dos_Header + pImage_Dos_Header->e_lfanew + 4 + 0x14);
     cout << uppercase << hex << pImage_Optional_Header32->Magic << endl;
     
